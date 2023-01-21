@@ -23,7 +23,7 @@
         }
     }
     window.addEventListener("load", Start);
-
+    let DocumentBody;
     let MainContent = document.getElementById("main")[0];
     let MainParagraph = document.createElement("p");
 
@@ -32,6 +32,17 @@
     MainParagraph.textContent = "This is the main paragraph";
 
     MainContent.appendChild(MainParagraph);
+
+    let FirstString = "This is";
+    let SecondString = `${FirstString} the Main Paragraph.`;
+    MainParagraph.textContent = SecondString;
+
+    let Article = document.createElement("article");
+    let ArticleParagraph = `<p id="ArticleParagraph" class="mt-3">This is my article paragraph</p>`;
+    Article.setAttribute("class", "container");
+    Article.innerHTML = ArticleParagraph;
+
+    DocumentBody.appendChild(Article);
     function DisplayHomePage() {
         let AboutUsButton = document.getElementById("AboutUsBtn");
         AboutUsButton.addEventListener("click", function (){
