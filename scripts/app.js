@@ -24,7 +24,7 @@
     }
     window.addEventListener("load", Start);
 
-    let MainContent = document.getElementById("main");
+    let MainContent = document.getElementById("main")[0];
     let MainParagraph = document.createElement("p");
 
     MainParagraph.setAttribute("id", "MainParagraph");
